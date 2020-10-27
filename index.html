@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>25 + 5 Clock</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="grid-container">
+        <div id="break-label" class="grid-item">
+          <p>Break Length</p>
+          <button type="button" name="button" id="break-increment">
+            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+          </button>
+          <span id="break-length" data-time="300">5</span>
+          <button type="button" name="button" id="break-decrement">
+            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div id="session-label" class="grid-item">
+          <p>Session Length</p>
+          <button type="button" name="button" id="session-increment">
+            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+          </button>
+          <span id="session-length" data-time="1500">25</span>
+          <button type="button" name="button" id="session-decrement">
+            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="grid-item" id="main">
+          <p id="timer-label">Session</p>
+          <p id="time-left">25:00</p>
+        </div>
+
+        <div class="grid-item" id="control">
+          <button type="button" name="button" id="start_stop">
+            <i class="fas fa-play"></i><i class="fas fa-pause"></i>
+          </button>
+          <button type="button" name="button" id="reset">
+            <i class="fas fa-redo-alt"></i>
+          </button>
+        </div>
+      </div>
+      <audio
+        id="beep"
+        src="https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg"
+      ></audio>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
